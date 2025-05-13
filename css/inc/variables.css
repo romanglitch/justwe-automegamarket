@@ -1,0 +1,102 @@
+:root {
+    /* Container */
+    --container-width: 1340px;
+    --container-padding: 10px;
+
+    /* Calc functions */
+    --ww-container: calc((100vw - var(
+    --container-width)) / 2);
+    --ww-p-container: calc((100vw - var(
+    --container-width)) / 2 + var(--container-padding));
+
+    /* Font-faces */
+    --main-font-family:
+    'Avenir Next Cyr', sans-serif;
+    --main-font-family_ultra:
+    'Avenir Next Cyr Ultra', sans-serif;
+    --main-font-family_demi:
+    'Avenir Next Cyr Demi', sans-serif;
+
+    /* Fonts */
+    --body-font: var(
+    --base-font-size) var(--main-font-family);
+    --h1: 2.25em var(
+    --main-font-family);
+    --h2: 1.625em var(
+    --main-font-family_demi);
+    --h3: 500 1.5em var(
+    --main-font-family);
+    --h4: 1.125em var(
+    --main-font-family_demi);
+    --btn: 1em var(
+    --main-font-family_demi);
+    --text-regular: 1em var(
+    --main-font-family);
+    --text-regular-demi: 1em var(
+    --main-font-family_demi);
+    --text-medium: 500 1em var(
+    --main-font-family);
+    --text-sm-medium: 500 0.875em var(
+    --main-font-family);
+    --text-sm-demi: 0.875em var(
+    --main-font-family_demi);
+    --text-sm: 0.875em var(
+    --main-font-family);
+    --text-field: 0.875em var(
+    --main-font-family);
+    --text-links: 0.875em var(
+    --main-font-family);
+
+    /* Sizes */
+    --base-font-size: 16px;
+    --header-height: 60px;
+    --section-gap: 60px;
+    --border-radius-12: 12px;
+    --border-radius-8: 8px;
+    --border-radius-6: 6px;
+    --border-radius-4: 4px;
+
+    /* Body colors set */
+    --body-bg-color: var(
+    --white);
+    --body-text-color: var(
+    --s-black);
+
+    /* Main colors */
+    --m-accent: #47DAD4;
+    --m-accent-hover: #40C6C0;
+    --m-accent-80: #6CE3DE;
+    --m-accent-60: #91EAE6;
+    --m-accent-40: #B5F1EF;
+    --m-accent-20: #DAF8F7;
+    --m-accent-dark-60: #006662;
+    --m-accent-dark-40: #009993;
+    --m-accent-dark-20: #00CCC4;
+    --m-accent2: #FFE700;
+    --m-accent2-hover: #EFDA09;
+
+    /* Secondary colors */
+    --s-light-gray: #F6F7F8;
+    --s-light-gray-hover: #EEEEEE;
+    --s-dark-gray: #8292A8;
+    --s-green: #22CA3D;
+    --s-red: #CA4022;
+    --s-black: #021220;
+
+    /* Default colors */
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Shadows */
+    --sh-sm: 0px 1px 2px rgba(45, 54, 67, 0.05);
+    --sh-base: 0px 2px 4px rgba(45, 54, 67, 0.08), 0px 1px 2px rgba(45, 54, 67, 0.04);
+    --sh-md: 0px 4px 8px -2px rgba(45, 54, 67, 0.08), 0px 2px 4px -2px rgba(45, 54, 67, 0.06);
+    --sh-lg: 0px -12px 24px -4px rgba(45, 54, 67, 0.04), 0px 12px 24px -4px rgba(45, 54, 67, 0.04), 0px 8px 11px -4px rgba(45, 54, 67, 0.04);
+    --sh-xl: 0px 24px 50px -12px rgba(45, 54, 67, 0.12);
+
+    /* Transitions */
+    --tr-10s: all .10s ease;
+    --tr-20s: all .20s ease;
+    --tr-25s: all .25s ease;
+    --tr-30s: all .30s ease-in-out;
+}

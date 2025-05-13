@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="referrer" content="origin">
+		<meta name="HandheldFriendly" content="true">
+
+		<title>auto-port.ru</title>
+
+		<!-- vendor styles -->
+		<link href="css/vendor/normalize.min.css" rel="stylesheet">
+		<link href="css/vendor/swiper-bundle.min.css" rel="stylesheet">
+		<link href="css/vendor/select2.min.css" rel="stylesheet">
+		<link href="css/vendor/ion.rangeSlider.min.css" rel="stylesheet">
+		<link href="css/vendor/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="css/vendor/simple-notify.min.css" rel="stylesheet">
+
+		<!-- main styles -->
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/dev.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="header-main">
+				<div class="container header-main-row">
+					<a href="/" class="header-main-logo">
+						<img class="header-main-logo__img" alt="Car Sale" src="img/logo.svg">
+					</a>
+					<nav class="header-main-nav">
+						<a href="#" class="header-main-nav__item js-h-catalog-btn">
+							<b>Каталог</b>
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Кредит
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Trade-in
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Спецпредложения
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Сотрудничество
+						</a>
+					</nav>
+					<div class="header-main-actions">
+						<a href="#" class="header-compare-btn"></a>
+						<a href="#" class="header-favourite-btn">
+							<span>Избранное</span>
+							<sup>12</sup>
+						</a>
+						<div class="header-geo">
+							<button class="header-geo-btn js-h-geo-btn">
+								<span>Москва <sup style="display: none">+200 км</sup></span>
+							</button>
+							<div class="header-geo-popup js-h-geo-popup">
+								<form class="geo-form">
+									<label class="main-form-label">
+										<select class="main-form-select main-form-select_search">
+											<option selected disabled>Найти город</option>
+											<option>Москва</option>
+											<option>Example variant... Example variant...</option>
+											<option>Example variant... Example variant...Example variant... Example variant...</option>
+										</select>
+									</label>
+									<div class="geo-form__popular">
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Ростов-на-Дону
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Ростов-на-Дону
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Ростов-на-Дону
+										</a>
+									</div>
+									<label class="main-form-label" style="display: none">
+										<span class="main-form-label__heading">Радиус поиска</span>
+										<input type="text" class="js-geo-range" data-values="0,100,200,300,400,500" data-from="2" name="geo-range" value="" />
+									</label>
+									<button class="btn btn_primary">
+										Сохранить
+									</button>
+								</form>
+							</div>
+						</div>
+						<button class="header-menu-btn js-h-menu-btn">
+							<span>Меню</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="header-catalog js-h-catalog">
+				<div class="container">
+					<div class="header__grid">
+						<div class="header__col">
+							<div class="header-catalog__heading">
+								Поиск по типу кузова
+							</div>
+							<div class="header-bodies-grid">
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#sedan"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Седан
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#hatchback"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Хэтчбек
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#wagon"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Универсал
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#coupe"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Купе
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#crossover"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Кроссовер
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#off-road"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Внедорожник
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#pickup"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Пикап
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#minivan"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Минивен
+									</div>
+								</a>
+								<a href="#" class="header-bodies-more">
+									<div class="header-bodies-more__text">
+										Все типы
+										<br>кузова
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header__col">
+							<div class="header-catalog__heading">
+								Поиск по маркам автомобилей
+							</div>
+							<div class="header-marks-grid">
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header__col">
+							<div class="header-catalog__heading">
+								Поиск по популярным запросам
+							</div>
+							<div class="header-popular-links">
+								<a href="#" class="header-popular-item">
+									<svg class="header-popular-item__icon">
+										<use xlink:href="img/header-popular-sprite.svg#money"></use>
+									</svg>
+									<div class="header-popular-item__text">
+										Автомобили <b>до 1 500 000 р</b>
+									</div>
+								</a>
+								<a href="#" class="header-popular-item">
+									<svg class="header-popular-item__icon">
+										<use xlink:href="img/header-popular-sprite.svg#people"></use>
+									</svg>
+									<div class="header-popular-item__text">
+										Автомобили <b>для большой семьи</b>
+									</div>
+								</a>
+								<a href="#" class="header-popular-item">
+									<svg class="header-popular-item__icon">
+										<use xlink:href="img/header-popular-sprite.svg#compass"></use>
+									</svg>
+									<div class="header-popular-item__text">
+										Покорители бездорожья
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Каталог автомобилей
+								</a>
+								<a href="#" class="header-nav__item">
+									Автомобили с пробегом
+								</a>
+								<a href="#" class="header-nav__item">
+									Предложение дня
+								</a>
+								<a href="#" class="header-nav__item">
+									Выкуп автомобиля
+								</a>
+								<a href="#" class="header-nav__item">
+									Сравнение автомобилей
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-menu js-h-menu">
+				<div class="container">
+					<div class="header__grid header__grid_no_dividers">
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Автокредит
+								</a>
+								<a href="#" class="header-nav__item">
+									Trade-in
+								</a>
+								<a href="#" class="header-nav__item">
+									Спецпредложения
+								</a>
+								<a href="#" class="header-nav__item">
+									Предложение дня
+								</a>
+								<a href="#" class="header-nav__item">
+									Выкуп автомобиля
+								</a>
+							</nav>
+						</div>
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Отзывы об автомобилях
+								</a>
+								<a href="#" class="header-nav__item">
+									Лучшие автомобили
+								</a>
+								<a href="#" class="header-nav__item">
+									Дилеры
+								</a>
+							</nav>
+						</div>
+						<div class="header__col header__col_mob_last">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									О нас
+								</a>
+								<a href="#" class="header-nav__item">
+									Контакты
+								</a>
+								<a href="#" class="header-nav__item">
+									Сотрудничество
+								</a>
+							</nav>
+						</div>
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Сравнение автомобилей
+								</a>
+								<a href="#" class="header-nav__item">
+									Авто в избранном
+								</a>
+								<a href="#" class="header-nav__item">
+									Помощь в подборе авто
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Страница нового авто (комплектация) -->
+			<section class="section-bg section-model-page">
+				<div class="container">
+					<div class="breadcrumbs">
+						<a href="/" class="breadcrumbs__item">Главная (название салона)</a>
+						<a href="#" class="breadcrumbs__item">Каталог новых авто</a>
+						<a href="#" class="breadcrumbs__item">Модели Geely</a>
+						<a href="#" class="breadcrumbs__item">Geely Atlas Pro</a>
+						<span class="breadcrumbs__item">Flagship +</span>
+					</div>
+					<h1 class="page-title">
+						Geely Atlas Pro Flagship+
+					</h1>
+					<div class="model-block --disable-mb">
+						<div class="model-gallery">
+							<div class="model-gallery__labels">
+								<div class="model-gallery__label --bg-accent2">
+									Хит продаж
+								</div>
+								<div class="model-gallery__label --bg-accent">
+									Лидер сегмента
+								</div>
+							</div>
+							<div class="model-gallery__grid" data-gallery-limit data-gallery-name="model-gallery">
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+								<a class="model-gallery__item" href="img/ref__model-gallery.jpg" data-fancybox="model-gallery">
+									<img class="model-gallery__image lazy" data-src="img/ref__model-gallery.jpg" alt="null" src="img/lazy-loader.svg">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Характеристики автомобиля -->
+			<section class="section-bg section-model-page">
+				<div class="container">
+					<div class="model-page__grid">
+						<div class="model-page__body">
+							<div class="model-block model-block_mb_20">
+								<div class="model-content model-content_gap_70">
+									<div class="model-content__row">
+										<h3 class="model-content__title">
+											Характеристики автомобиля
+										</h3>
+										<div class="model-dealer-block">
+											<div class="model-dealer-block__geo">
+												Магнитогорск
+											</div>
+											<div class="model-dealer-block__name">
+												Дилер: Официальный дилер Geely
+											</div>
+										</div>
+										<div class="model-f-specs" data-specs-limit=".model-f-specs__item">
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#CalendarBlank"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Год выпуска
+													</div>
+													<div class="model-f-specs__value">
+														2023
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#GearStick"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														КПП
+													</div>
+													<div class="model-f-specs__value">
+														Автомат
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#Car"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Кузов
+													</div>
+													<div class="model-f-specs__value">
+														Внедорожник
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#People"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Кол-во мест
+													</div>
+													<div class="model-f-specs__value">
+														6
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#EngineBelt"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Двигатель
+													</div>
+													<div class="model-f-specs__value">
+														1,5 Дизель
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#Meter"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Мощность
+													</div>
+													<div class="model-f-specs__value">
+														177 л. с.
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#AllWheelDrive"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Привод
+													</div>
+													<div class="model-f-specs__value">
+														Полный
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#Fuel"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Расход топлива
+													</div>
+													<div class="model-f-specs__value">
+														8 л./100км.
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#Meter"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Мощность
+													</div>
+													<div class="model-f-specs__value">
+														177 л. с.
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#AllWheelDrive"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Привод
+													</div>
+													<div class="model-f-specs__value">
+														Полный
+													</div>
+												</div>
+											</div>
+											<div class="model-f-specs__item">
+												<svg class="model-f-specs__icon">
+													<use xlink:href="img/icons-sprite.svg#Fuel"></use>
+												</svg>
+												<div class="model-f-specs__content">
+													<div class="model-f-specs__title">
+														Расход топлива
+													</div>
+													<div class="model-f-specs__value">
+														8 л./100км.
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="model-content__row">
+										<h3 class="model-content__title">
+											Базовые опции
+										</h3>
+										<div class="model-description js-hidden-desc">
+											<div class="model-description__main">
+												<div class="model-description__grid">
+													<div class="model-description__block">
+														<h4 class="model-description__title">
+															Обзор
+														</h4>
+														<ul class="main-list main-list_dot_black">
+															<li class="main-list__item">
+																Светодиодные фары
+															</li>
+															<li class="main-list__item">
+																Датчик дождя
+															</li>
+															<li class="main-list__item">
+																Датчик света
+															</li>
+															<li class="main-list__item">
+																Система управления дальним светом
+															</li>
+															<li class="main-list__item">
+																Электрообогрев зоны стеклоочистителей
+															</li>
+															<li class="main-list__item">
+																Электрообогрев форсунок стеклоомывателей
+															</li>
+															<li class="main-list__item">
+																Обогрев зеркал
+															</li>
+														</ul>
+													</div>
+													<div class="model-description__block">
+														<h4 class="model-description__title">
+															Салон
+														</h4>
+														<ul class="main-list main-list_dot_black">
+															<li class="main-list__item">
+																Подогрев передних сидений
+															</li>
+															<li class="main-list__item">
+																Подогрев задних сидений
+															</li>
+															<li class="main-list__item">
+																Сиденье водителя: ручная регулировка
+															</li>
+															<li class="main-list__item">
+																Кожаный салон
+															</li>
+															<li class="main-list__item">
+																Отделка кожей рулевого колеса
+															</li>
+															<li class="main-list__item">
+																Накладки на пороги
+															</li>
+															<li class="main-list__item">
+																Передний центральный подлокотник
+															</li>
+															<li class="main-list__item">
+																Третий задний подголовник
+															</li>
+															<li class="main-list__item">
+																Адаптивный круиз-контроль
+															</li>
+															<li class="main-list__item">
+																Третий задний подголовник
+															</li>
+															<li class="main-list__item">
+																Адаптивный круиз-контроль
+															</li>
+														</ul>
+													</div>
+													<div class="model-description__block">
+														<h4 class="model-description__title">
+															Комфорт
+														</h4>
+														<ul class="main-list main-list_dot_black">
+															<li class="main-list__item">
+																Рулевое колесо и селектор КПП с отделкой кожей
+															</li>
+															<li class="main-list__item">
+																10 электрорегулировок сиденья водителя (включая 2 направления поясницы)
+															</li>
+															<li class="main-list__item">
+																Подогрев задних сидений
+															</li>
+															<li class="main-list__item">
+																Мультифункциональное рулевое колесо
+															</li>
+															<li class="main-list__item">
+																Подогрев рулевого колеса
+															</li>
+															<li class="main-list__item">
+																Круиз-контроль с ограничителем скорости
+															</li>
+															<li class="main-list__item">
+																Боковые зеркала заднего вида с электроприводом и подогревом
+															</li>
+															<li class="main-list__item">
+																Иммобилайзер и сигнализация
+															</li>
+															<li class="main-list__item">
+																Индикатор низкого уровня омывающей жидкости
+															</li>
+															<li class="main-list__item">
+																Регулировка рулевой колонки по высоте и по вылету
+															</li>
+															<li class="main-list__item">
+																Система выбора режима вождения (Drive Mode Select)
+															</li>
+															<li class="main-list__item">
+																Механическая регулировка сидений 2 ряда в продольном направлении
+															</li>
+															<li class="main-list__item">
+																Круиз-контроль с ограничителем скорости
+															</li>
+															<li class="main-list__item">
+																Боковые зеркала заднего вида с электроприводом и подогревом
+															</li>
+															<li class="main-list__item">
+																Иммобилайзер и сигнализация
+															</li>
+															<li class="main-list__item">
+																Индикатор низкого уровня омывающей жидкости
+															</li>
+															<li class="main-list__item">
+																Регулировка рулевой колонки по высоте и по вылету
+															</li>
+															<li class="main-list__item">
+																Система выбора режима вождения (Drive Mode Select)
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="model-description__hidden">
+												<div class="model-description__grid">
+													<div class="model-description__block">
+														<h4 class="model-description__title">
+															Комфорт
+														</h4>
+														<ul class="main-list main-list_dot_black">
+															<li class="main-list__item">
+																Рулевое колесо и селектор КПП с отделкой кожей
+															</li>
+															<li class="main-list__item">
+																10 электрорегулировок сиденья водителя (включая 2 направления поясницы)
+															</li>
+															<li class="main-list__item">
+																Подогрев задних сидений
+															</li>
+															<li class="main-list__item">
+																Мультифункциональное рулевое колесо
+															</li>
+															<li class="main-list__item">
+																Подогрев рулевого колеса
+															</li>
+															<li class="main-list__item">
+																Круиз-контроль с ограничителем скорости
+															</li>
+															<li class="main-list__item">
+																Боковые зеркала заднего вида с электроприводом и подогревом
+															</li>
+															<li class="main-list__item">
+																Иммобилайзер и сигнализация
+															</li>
+															<li class="main-list__item">
+																Индикатор низкого уровня омывающей жидкости
+															</li>
+															<li class="main-list__item">
+																Регулировка рулевой колонки по высоте и по вылету
+															</li>
+															<li class="main-list__item">
+																Система выбора режима вождения (Drive Mode Select)
+															</li>
+															<li class="main-list__item">
+																Механическая регулировка сидений 2 ряда в продольном направлении
+															</li>
+															<li class="main-list__item">
+																Круиз-контроль с ограничителем скорости
+															</li>
+															<li class="main-list__item">
+																Боковые зеркала заднего вида с электроприводом и подогревом
+															</li>
+															<li class="main-list__item">
+																Иммобилайзер и сигнализация
+															</li>
+															<li class="main-list__item">
+																Индикатор низкого уровня омывающей жидкости
+															</li>
+															<li class="main-list__item">
+																Регулировка рулевой колонки по высоте и по вылету
+															</li>
+															<li class="main-list__item">
+																Система выбора режима вождения (Drive Mode Select)
+															</li>
+														</ul>
+													</div>
+													<div class="model-description__block">
+														<h4 class="model-description__title">
+															Салон
+														</h4>
+														<ul class="main-list main-list_dot_black">
+															<li class="main-list__item">
+																Подогрев передних сидений
+															</li>
+															<li class="main-list__item">
+																Подогрев задних сидений
+															</li>
+															<li class="main-list__item">
+																Сиденье водителя: ручная регулировка
+															</li>
+															<li class="main-list__item">
+																Кожаный салон
+															</li>
+															<li class="main-list__item">
+																Отделка кожей рулевого колеса
+															</li>
+															<li class="main-list__item">
+																Накладки на пороги
+															</li>
+															<li class="main-list__item">
+																Передний центральный подлокотник
+															</li>
+															<li class="main-list__item">
+																Третий задний подголовник
+															</li>
+															<li class="main-list__item">
+																Адаптивный круиз-контроль
+															</li>
+															<li class="main-list__item">
+																Третий задний подголовник
+															</li>
+															<li class="main-list__item">
+																Адаптивный круиз-контроль
+															</li>
+														</ul>
+													</div>
+													<div class="model-description__block">
+														<h4 class="model-description__title">
+															Обзор
+														</h4>
+														<ul class="main-list main-list_dot_black">
+															<li class="main-list__item">
+																Светодиодные фары
+															</li>
+															<li class="main-list__item">
+																Датчик дождя
+															</li>
+															<li class="main-list__item">
+																Датчик света
+															</li>
+															<li class="main-list__item">
+																Система управления дальним светом
+															</li>
+															<li class="main-list__item">
+																Электрообогрев зоны стеклоочистителей
+															</li>
+															<li class="main-list__item">
+																Электрообогрев форсунок стеклоомывателей
+															</li>
+															<li class="main-list__item">
+																Обогрев зеркал
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<button class="arrow-link arrow-link_down js-hidden-desc-btn">
+												Показать больше опций
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="model-block">
+								<div class="model-content">
+									<div class="model-content__row">
+										<h3 class="model-content__title">
+											Описание кроссовера Джили Атлас Про
+										</h3>
+										<p class="model-content__text">
+											Бренд Geely уже нельзя назвать китайским. Концерн сотрудничает со многими европейскими компаниями.
+											<br>Последние модели оснащены технологиями популярного и надежного Volvo, а за подвеску отвечают специалисты Lotus. Поэтому производимые автомобили отличаются качеством и долговечностью.
+											<br>Не успели стихнуть обсуждения Geely Atlas, фанатов бренда порадовали новой моделью - Geely Atlas Pro.
+											<br>В первую очередь изменения коснулись мотора. Кросовер оснащен 1,5-литровым турбодвигателем JLH-3G15TD, который образует мощность в 190 л.с. Плавность хода обеспечивает семиступенчатая коробка с двумя сцеплениями.
+											<br>Это далеко не единственные преимущества нового Geely Atlas Pro. Приставка в названии «Pro» олицетворяет его преимущество над другими моделями в линейке бренда и выражает принадлежность к новейшим технологиям.
+											<br>Комплектации автомобиля приятно порадуют автомобилистов. Даже в базовом варианте кроссовер оснащен всеми необходимыми функциями для комфортной езды по городу и трассе. Эти и многие другие преимущества вызовут желание купить Geely Atlas Pro.
+										</p>
+									</div>
+								</div>
+							</div>
+							<form class="credit-form">
+								<div class="credit-form__grid">
+									<div class="credit-form__col">
+										<h3 class="credit-form__title">
+											Купить этот автомобиль в кредит
+										</h3>
+										<div class="credit-form-buttons">
+											<button class="credit-form-buttons__btn js-credit-tabs-nav">
+												Со взносом
+											</button>
+											<button class="credit-form-buttons__btn js-credit-tabs-nav">
+												Без вноса
+											</button>
+										</div>
+										<div class="credit-form-ranges">
+											<div class="credit-form-ranges__tab js-credit-tabs-content">
+												<div class="credit-form-range">
+													<label class="main-form-label">
+														<span class="main-form-label__heading">Размер первоначального взноса %</span>
+														<span class="main-form-label__sub">от 232 000 ₽ до 1 636 000 ₽</span>
+														<input
+																type="text"
+																class="main-form-s-input js-mask-range"
+																name="credit-fee"
+																data-min="232000"
+																data-max="1636000"
+																data-postfix=" ₽"
+																data-range-name="credit-fee-range"
+																data-range-min="10"
+																data-range-max="90"
+																data-range-step="10"
+														/>
+														<input type="text" name="credit-fee-range" />
+													</label>
+												</div>
+											</div>
+											<div class="credit-form-ranges__tab js-credit-tabs-content">
+												<div class="credit-form-range">
+													<label class="main-form-label">
+														<span class="main-form-label__heading">Сумма кредита %</span>
+														<span class="main-form-label__sub">от 232 000 ₽ до 1 880 000 ₽</span>
+														<input
+																type="text"
+																class="main-form-s-input js-mask-range"
+																name="credit-total"
+																data-min="232000"
+																data-max="1880000"
+																data-postfix=" ₽"
+																data-range-name="credit-total-range"
+																data-range-min="10"
+																data-range-max="90"
+																data-range-step="10"
+														/>
+														<input type="text" name="credit-total-range" />
+													</label>
+												</div>
+											</div>
+											<div class="credit-form-range">
+												<label class="main-form-label">
+													<span class="main-form-label__heading">Срок кредита</span>
+													<span class="main-form-label__sub">от 6 месяцев  до 7 лет</span>
+													<span class="main-form-label__value" data-range-value="credit-term-range"></span>
+													<input type="text" class="js-credit-term-range" data-values="0.5, 1,2,3,4,5,6,7" data-from="3" name="credit-term-range" value="" />
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="credit-form__col">
+										<div class="credit-form__info">
+											<h4 class="credit-form__info__title">
+												Кредитная ставка 10,9%*
+											</h4>
+											<div class="credit-form__info__payment">
+												Платеж: 51 898 ₽
+											</div>
+											<div class="credit-form__checkboxes">
+												<label class="main-form-checkbox">
+													<input class="main-form-checkbox__input" type="checkbox">
+													<span class="main-form-checkbox__checkmark"></span>
+													<span class="main-form-checkbox__text">Есть автомобиль в Trade-in</span>
+												</label>
+											</div>
+											<div class="credit-form__inputs">
+												<label class="main-form-label">
+													<input class="main-form-input js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+												</label>
+												<label class="main-form-label">
+													<input class="main-form-input" type="text" placeholder="Имя">
+												</label>
+												<button class="btn btn_primary">
+													Отправить
+												</button>
+												<p class="main-form-terms">
+													Пример расчета условий по кредиту является ориентировочным, носит исключительно справочный информационный характер и не является офертой. Финальные условия кредитования определяются при заключении кредитного договора.
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="model-page__sidebar">
+							<form class="express-credit-form">
+								<h2 class="express-credit-form__price">
+									1 898 990 ₽
+								</h2>
+								<h4 class="express-credit-form__text">
+									Получить специальную скидку
+								</h4>
+								<div class="express-credit-form__checkboxes">
+									<label class="main-form-checkbox">
+										<input class="main-form-checkbox__input" type="checkbox">
+										<span class="main-form-checkbox__checkmark"></span>
+										<span class="main-form-checkbox__text">Автокредит</span>
+									</label>
+									<label class="main-form-checkbox">
+										<input class="main-form-checkbox__input" type="checkbox">
+										<span class="main-form-checkbox__checkmark"></span>
+										<span class="main-form-checkbox__text">Trade-in</span>
+									</label>
+								</div>
+								<div class="express-credit-form__inputs">
+									<label class="main-form-label">
+										<input class="main-form-input main-form-input_bg_white js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+									</label>
+									<label class="main-form-label">
+										<input class="main-form-input main-form-input_bg_white" type="text" placeholder="Имя">
+									</label>
+									<button class="btn btn_primary">
+										Отправить
+									</button>
+								</div>
+							</form>
+							<div class="model-page-actions">
+								<!-- Класс --active -->
+								<button class="btn btn_white btn_sh action-btn action-btn__favourite">
+									<span class="action-btn__default-text">Добавить в избранное</span>
+									<span class="action-btn__active-text">В избранном</span>
+								</button>
+								<button class="btn btn_white btn_sh action-btn action-btn__compare --active">
+									<span class="action-btn__default-text">Добавить к сравнению</span>
+									<span class="action-btn__active-text">В сравнении</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Автомобиль представлен в автосалоне -->
+			<section class="section-bg section-car-dealer">
+				<div class="container">
+					<div class="section-heading">
+						<h2 class="section-heading__title">
+							Автомобиль представлен в автосалоне
+						</h2>
+					</div>
+					<div class="car-dealer-grid">
+						<div class="car-dealer-grid__col">
+							<div class="car-dealer-block car-dealer-photo lazy" data-bg="img/ref__car-dealer-photo.jpg">
+								<a href="#" class="btn btn_white car-dealer-photo__btn">
+									Проложить маршрут
+								</a>
+							</div>
+						</div>
+						<div class="car-dealer-grid__col">
+							<div class="car-dealer-block car-dealer-info">
+								<div class="car-dealer-block__header">
+									<img class="car-dealer-info__icon lazy" data-src="img/ref__car-dealer-logo.png" alt="Geely" src="img/lazy-loader.svg">
+								</div>
+								<div class="car-dealer-block__body">
+									<div class="car-dealer-info__rating">
+										<div class="stars-rating" style="--stars-value: 4.5">
+											<div class="stars-rating__value">4,5</div>
+											<div class="stars-rating__stars"></div>
+										</div>
+										<a href="#" class="arrow-link">
+											157 отзывов
+										</a>
+									</div>
+									<div class="car-dealer-info__contacts">
+										<div class="car-dealer-contact">
+											<div class="car-dealer-contact__title">
+												Адрес
+											</div>
+											<div class="car-dealer-contact__value">
+												г. Москва, 39 км МКАД, вл. 7
+											</div>
+										</div>
+										<div class="car-dealer-contact">
+											<div class="car-dealer-contact__title">
+												Время работы
+											</div>
+											<div class="car-dealer-contact__value">
+												пн. - пт. 9:00 - 21:00
+											</div>
+										</div>
+										<div class="car-dealer-contact">
+											<div class="car-dealer-contact__title">
+												Контактный телефон
+											</div>
+											<a class="car-dealer-contact__link" href="#">
+												+7 (999) 999-99-99
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="car-dealer-grid__col">
+							<div class="car-dealer-block car-dealer-reviews">
+								<div class="car-dealer-block__header">
+									<h3 class="car-dealer-block__title">
+										Отзывы
+									</h3>
+								</div>
+								<div class="car-dealer-block__body">
+									<div class="car-dealer-reviews__carousel">
+										<div class="swiper reviews-carousel">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide reviews-carousel-slide">
+													<div class="reviews-carousel-item reviews-carousel-item_type_dealer">
+														<div class="reviews-carousel-item__header">
+															<img class="reviews-carousel-item__avatar lazy" data-src="img/ref__reviews-carousel-item.jpg" alt="Автомобиль: Geely Atlas Pro Flagship+" src="img/lazy-loader.svg">
+															<div class="reviews-carousel-item__info">
+																<div class="reviews-carousel-item__name">
+																	Сергей Козлов
+																</div>
+																<div class="reviews-carousel-item__car">
+																	Автомобиль: Geely Atlas Pro Flagship+
+																</div>
+															</div>
+														</div>
+														<div class="reviews-carousel-item__body">
+															<div class="reviews-carousel-item__body__text">
+																Приобрел автомобиль Geely в салоне Geely Msk. Качеством обслуживания остался доволен. Менеджером был Семен Яковлев. Спасибо за оперативность и подробную консультацию.
+															</div>
+														</div>
+														<div class="reviews-carousel-item__footer">
+															<div class="reviews-carousel-item__rating">
+																<div class="stars-rating" style="--stars-value: 4.5">
+																	<div class="stars-rating__stars"></div>
+																</div>
+															</div>
+															<div class="reviews-carousel-item__date">
+																12 апреля 2023
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide reviews-carousel-slide">
+													<div class="reviews-carousel-item reviews-carousel-item_type_dealer">
+														<div class="reviews-carousel-item__header">
+															<img class="reviews-carousel-item__avatar lazy" data-src="img/ref__reviews-carousel-item.jpg" alt="Автомобиль: Geely Atlas Pro Flagship+" src="img/lazy-loader.svg">
+															<div class="reviews-carousel-item__info">
+																<div class="reviews-carousel-item__name">
+																	Сергей Козлов
+																</div>
+																<div class="reviews-carousel-item__car">
+																	Автомобиль: Geely Atlas Pro Flagship+
+																</div>
+															</div>
+														</div>
+														<div class="reviews-carousel-item__body">
+															<div class="reviews-carousel-item__body__text">
+																Приобрел автомобиль Geely в салоне Geely Msk. Качеством обслуживания остался доволен. Менеджером был Семен Яковлев. Спасибо за оперативность и подробную консультацию.
+															</div>
+														</div>
+														<div class="reviews-carousel-item__footer">
+															<div class="reviews-carousel-item__rating">
+																<div class="stars-rating" style="--stars-value: 4.5">
+																	<div class="stars-rating__stars"></div>
+																</div>
+															</div>
+															<div class="reviews-carousel-item__date">
+																12 апреля 2023
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide reviews-carousel-slide">
+													<div class="reviews-carousel-item reviews-carousel-item_type_dealer">
+														<div class="reviews-carousel-item__header">
+															<img class="reviews-carousel-item__avatar lazy" data-src="img/ref__reviews-carousel-item.jpg" alt="Автомобиль: Geely Atlas Pro Flagship+" src="img/lazy-loader.svg">
+															<div class="reviews-carousel-item__info">
+																<div class="reviews-carousel-item__name">
+																	Сергей Козлов
+																</div>
+																<div class="reviews-carousel-item__car">
+																	Автомобиль: Geely Atlas Pro Flagship+
+																</div>
+															</div>
+														</div>
+														<div class="reviews-carousel-item__body">
+															<div class="reviews-carousel-item__body__text">
+																Приобрел автомобиль Geely в салоне Geely Msk. Качеством обслуживания остался доволен. Менеджером был Семен Яковлев. Спасибо за оперативность и подробную консультацию.
+															</div>
+														</div>
+														<div class="reviews-carousel-item__footer">
+															<div class="reviews-carousel-item__rating">
+																<div class="stars-rating" style="--stars-value: 4.5">
+																	<div class="stars-rating__stars"></div>
+																</div>
+															</div>
+															<div class="reviews-carousel-item__date">
+																12 апреля 2023
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="swiper-slide reviews-carousel-slide">
+													<div class="reviews-carousel-item reviews-carousel-item_type_dealer">
+														<div class="reviews-carousel-item__header">
+															<img class="reviews-carousel-item__avatar lazy" data-src="img/ref__reviews-carousel-item.jpg" alt="Автомобиль: Geely Atlas Pro Flagship+" src="img/lazy-loader.svg">
+															<div class="reviews-carousel-item__info">
+																<div class="reviews-carousel-item__name">
+																	Сергей Козлов
+																</div>
+																<div class="reviews-carousel-item__car">
+																	Автомобиль: Geely Atlas Pro Flagship+
+																</div>
+															</div>
+														</div>
+														<div class="reviews-carousel-item__body">
+															<div class="reviews-carousel-item__body__text">
+																Приобрел автомобиль Geely в салоне Geely Msk. Качеством обслуживания остался доволен. Менеджером был Семен Яковлев. Спасибо за оперативность и подробную консультацию.
+															</div>
+														</div>
+														<div class="reviews-carousel-item__footer">
+															<div class="reviews-carousel-item__rating">
+																<div class="stars-rating" style="--stars-value: 4.5">
+																	<div class="stars-rating__stars"></div>
+																</div>
+															</div>
+															<div class="reviews-carousel-item__date">
+																12 апреля 2023
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-button-next reviews-carousel-next"></div>
+											<div class="swiper-button-prev reviews-carousel-prev"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Другие варианты Geely Atlas Pro -->
+			<section class="section-bg section-catalog">
+				<div class="container">
+					<div class="section-heading">
+						<h2 class="section-heading__title">
+							Другие варианты Geely Atlas Pro
+						</h2>
+					</div>
+					<div class="swiper carousel carousel-catalog">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare --active" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare --active" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev carousel-prev-btn"></div>
+						<div class="swiper-button-next carousel-next-btn"></div>
+						<div class="swiper-pagination carousel-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Услуги -->
+			<section class="section-bg section-services">
+				<div class="container">
+					<div class="services-grid">
+						<div class="services-item s-index-1 services-item_2x">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-credit.png" alt="Кредит" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Кредит
+							</h4>
+							<div class="services-item__content">
+								<ul class="main-list main-list_grid_2">
+									<li class="main-list__item">
+										Не выходя из дома
+									</li>
+									<li class="main-list__item">
+										Без страхования жизни
+									</li>
+									<li class="main-list__item">
+										Онлайн-заявка
+									</li>
+									<li class="main-list__item">
+										На срок до 7 лет
+									</li>
+								</ul>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-2">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-buyout.png" alt="Выкуп автомобилей" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Выкуп автомобилей
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Продайте свой авто
+									<br>без лишних трудностей
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-3">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-car-reviews.png" alt="Отзывы об автомобилях" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Отзывы об автомобилях
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Честные отзывы
+									<br>автолюбителей
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-4 services-item_2x">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-tradein.png" alt="Trade-in" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Trade-in
+							</h4>
+							<div class="services-item__content">
+								<ul class="main-list main-list_grid_2">
+									<li class="main-list__item">
+										Бесплатная диагностика
+									</li>
+									<li class="main-list__item">
+										Оформление за 1 час
+									</li>
+									<li class="main-list__item">
+										Безопасная сделка
+									</li>
+									<li class="main-list__item">
+										До 150 000 ₽
+									</li>
+								</ul>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-5">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-spec-sale.png" alt="Спецпредложения" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Спецпредложения
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Самые выгодные
+									<br>предложения
+									<br>от дилеров
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-6">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-best-cars.png" alt="Лучшие автомобили" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Лучшие автомобили
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Автомобили с самым
+									<br>высоким рейтингом
+									<br>среди пользователей
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Иномарки в той же ценовой категории -->
+			<section class="section-bg section-catalog">
+				<div class="container">
+					<div class="section-heading">
+						<h2 class="section-heading__title">
+							Иномарки в той же ценовой категории
+						</h2>
+					</div>
+					<div class="swiper carousel carousel-catalog">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare --active" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare --active" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide carousel-slide">
+								<div class="catalog-item">
+									<div class="catalog-item__top">
+										<a href="#" class="catalog-item-mark">
+											<img class="catalog-item-mark__icon lazy" data-src="img/ref__mark-icon.png" alt="Geely" src="img/lazy-loader.svg">
+											<div class="catalog-item-mark__name">
+												Mersedes-Benz
+											</div>
+										</a>
+										<a href="#" class="catalog-item-compare" title="Добавить к сравнению"></a>
+									</div>
+									<a href="#" class="catalog-item__thumb">
+										<img class="catalog-item__thumb__img lazy" data-src="img/ref__car-thumb.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+										<div class="catalog-item__thumb__label">
+											Лучшая цена
+										</div>
+									</a>
+									<div class="catalog-item__content">
+										<a href="#" class="catalog-item__title">
+											Atlas Pro Flagship+
+										</a>
+										<div class="catalog-item__specs">
+											<span>Внедорожник</span>
+											<span>2022</span>
+											<span>Бензин, 1.5</span>
+											<span>Робот</span>
+											<span>Полный</span>
+											<span>Черный металлик</span>
+										</div>
+										<a href="#" class="arrow-link">
+											Все опции
+										</a>
+									</div>
+									<div class="catalog-item__price">
+										<div class="catalog-item__price__main">
+											1 898 990 ₽
+										</div>
+										<div class="catalog-item__price__credit">
+											от 18 124 ₽/мес.
+										</div>
+									</div>
+									<div class="catalog-item__actions">
+										<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+										<a href="#" class="btn btn_primary catalog-item__btn">
+											Оставить заявку
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-button-prev carousel-prev-btn"></div>
+						<div class="swiper-button-next carousel-next-btn"></div>
+						<div class="swiper-pagination carousel-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Остались вопросы ? -->
+			<section class="section-bg section-questions">
+				<div class="container">
+					<form class="questions-form">
+						<h2 class="questions-form__title">
+							Остались вопросы ?
+						</h2>
+						<p class="questions-form__text">
+							Закажите консультацию нашего специалиста и мы перезвоним в удобное вам время
+						</p>
+						<div class="questions-form__inputs">
+							<label class="main-form-label">
+								<select class="main-form-select">
+									<option selected disabled>Выбрать время</option>
+									<option>Example variant... Example variant...</option>
+									<option>Example variant... Example variant...</option>
+									<option>Example variant... Example variant...</option>
+								</select>
+							</label>
+							<label class="main-form-label">
+								<input class="main-form-input js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+							</label>
+							<button class="btn btn_primary">
+								Обратный звонок
+							</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer">
+				<div class="container">
+					<div class="footer__grid">
+						<div class="footer__col">
+							<a href="/" class="footer-logo">
+								<img class="footer-logo__img" alt="Car Sale" src="img/logo.svg">
+							</a>
+						</div>
+						<div class="footer__col">
+							<nav class="footer-nav">
+								<a href="#" class="footer-nav__item">
+									Автокредит
+								</a>
+								<a href="#" class="footer-nav__item">
+									Trade-in
+								</a>
+								<a href="#" class="footer-nav__item">
+									Акции и подарки
+								</a>
+								<a href="#" class="footer-nav__item">
+									Спецпредложения
+								</a>
+								<a href="#" class="footer-nav__item">
+									Выкуп авто
+								</a>
+							</nav>
+						</div>
+						<div class="footer__col">
+							<nav class="footer-nav">
+								<a href="#" class="footer-nav__item">
+									Контакты
+								</a>
+								<a href="#" class="footer-nav__item">
+									О нас
+								</a>
+								<a href="#" class="footer-nav__item">
+									Сравнение автомобилей
+								</a>
+								<a href="#" class="footer-nav__item">
+									Отзывы об автомобилях
+								</a>
+								<a href="#" class="footer-nav__item">
+									Дилерам
+								</a>
+							</nav>
+						</div>
+						<div class="footer__col">
+							<form class="footer-form">
+								<div class="footer-form__title">
+									Нужна помощь в выборе автомобиля?
+								</div>
+								<div class="footer-form__description">
+									Закажите бесплатную консультацию наших специалистов. Перезвоним в течение 10 минут.
+								</div>
+								<div class="footer-form__inputs">
+									<label class="main-form-label">
+										<input class="main-form-input js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+									</label>
+									<button class="btn btn_primary">
+										Оставить заявку
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer__grid footer__grid_2">
+						<div class="footer__col">
+							<h4 class="footer-heading">
+								По регионам
+							</h4>
+							<nav class="footer-nav footer-nav_grid">
+								<a href="#" class="footer-nav__item">
+									Москва
+								</a>
+								<a href="#" class="footer-nav__item">
+									Москва
+								</a>
+								<a href="#" class="footer-nav__item">
+									Санкт-Петербург
+								</a>
+								<a href="#" class="footer-nav__item">
+									Санкт-Петербург
+								</a>
+								<a href="#" class="footer-nav__item">
+									Воронеж
+								</a>
+								<a href="#" class="footer-nav__item">
+									Воронеж
+								</a>
+								<a href="#" class="footer-nav__item">
+									Волгоград
+								</a>
+								<a href="#" class="footer-nav__item">
+									Волгоград
+								</a>
+								<a href="#" class="footer-nav__item">
+									Казань
+								</a>
+								<a href="#" class="footer-nav__item">
+									Казань
+								</a>
+								<a href="#" class="footer-nav__item">
+									Краснодар
+								</a>
+								<a href="#" class="footer-nav__item">
+									Краснодар
+								</a>
+							</nav>
+						</div>
+						<div class="footer__col">
+							<h4 class="footer-heading">
+								По популярным запросам
+							</h4>
+							<nav class="footer-nav footer-nav_grid">
+								<a href="#" class="footer-nav__item">
+									Автомобили до 1 500 000 ₽
+								</a>
+								<a href="#" class="footer-nav__item">
+									Автомобили до 1 500 000 ₽
+								</a>
+								<a href="#" class="footer-nav__item">
+									Внедорожники
+								</a>
+								<a href="#" class="footer-nav__item">
+									Внедорожники
+								</a>
+								<a href="#" class="footer-nav__item">
+									Седаны
+								</a>
+								<a href="#" class="footer-nav__item">
+									Седаны
+								</a>
+								<a href="#" class="footer-nav__item">
+									Корейские автомобили
+								</a>
+								<a href="#" class="footer-nav__item">
+									Корейские автомобили
+								</a>
+								<a href="#" class="footer-nav__item">
+									Самые популярные автомобили
+								</a>
+								<a href="#" class="footer-nav__item">
+									Самые популярные автомобили
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Notify for tablets -->
+		<div class="mobile-device-helper">
+			<div class="mobile-device-helper-inner">
+				Пожалуйста, переверните устройство. <br>Это необходимо для корректного отображения сайта.
+			</div>
+		</div>
+
+		<!-- bottom bar -->
+		<div class="mobile-bar">
+			<nav class="mobile-bar-nav">
+				<a href="#" class="mobile-bar-nav__item --active">
+					<div class="mobile-bar-nav__icon">
+						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11.7495 17.4993V12.9992C11.7495 12.8003 11.6704 12.6096 11.5298 12.4689C11.3891 12.3283 11.1984 12.2492 10.9995 12.2492H7.99945C7.80054 12.2492 7.60977 12.3283 7.46912 12.4689C7.32847 12.6096 7.24945 12.8003 7.24945 12.9992V17.4993C7.24945 17.6982 7.17045 17.889 7.02981 18.0296C6.88918 18.1703 6.69844 18.2493 6.49954 18.2493L2.00009 18.2499C1.90159 18.2499 1.80406 18.2305 1.71305 18.1929C1.62205 18.1552 1.53936 18.0999 1.4697 18.0303C1.40005 17.9606 1.3448 17.878 1.3071 17.787C1.2694 17.696 1.25 17.5984 1.25 17.4999V8.83176C1.25 8.72727 1.27183 8.62394 1.3141 8.52838C1.35637 8.43282 1.41814 8.34715 1.49545 8.27685L8.99493 1.45797C9.13299 1.33244 9.31287 1.26288 9.49946 1.26288C9.68605 1.26287 9.86594 1.33242 10.004 1.45793L17.5045 8.27685C17.5818 8.34714 17.6436 8.43282 17.6859 8.52838C17.7282 8.62395 17.75 8.7273 17.75 8.83179V17.4999C17.75 17.5984 17.7306 17.696 17.6929 17.787C17.6552 17.878 17.6 17.9606 17.5303 18.0303C17.4606 18.0999 17.378 18.1552 17.2869 18.1929C17.1959 18.2306 17.0984 18.2499 16.9999 18.2499L12.4994 18.2493C12.3005 18.2493 12.1097 18.1703 11.9691 18.0296C11.8285 17.889 11.7494 17.6982 11.7495 17.4993V17.4993Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Главная
+					</div>
+				</a>
+				<a href="javascript:;" class="mobile-bar-nav__item js-h-catalog-btn">
+					<div class="mobile-bar-nav__icon">
+						<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 14.25V16.5C21 16.6989 20.921 16.8897 20.7803 17.0303C20.6397 17.171 20.4489 17.25 20.25 17.25H18C17.8011 17.25 17.6103 17.171 17.4697 17.0303C17.329 16.8897 17.25 16.6989 17.25 16.5V14.25M21 14.25H3M21 14.25V8.25L18.198 1.9454C18.139 1.81282 18.0429 1.70018 17.9213 1.62113C17.7996 1.54208 17.6577 1.5 17.5126 1.5H6.48741C6.34233 1.5 6.20037 1.54208 6.07872 1.62113C5.95708 1.70018 5.86097 1.81282 5.80205 1.9454L3 8.25V14.25M6.75 14.25V16.5C6.75 16.6989 6.67098 16.8897 6.53033 17.0303C6.38968 17.171 6.19891 17.25 6 17.25H3.75C3.55109 17.25 3.36032 17.171 3.21967 17.0303C3.07902 16.8897 3 16.6989 3 16.5V14.25M16.5 11.25H18M6 11.25H7.5M1.5 8.25H22.5" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Каталог
+					</div>
+				</a>
+				<a href="#" class="mobile-bar-nav__item">
+					<div class="mobile-bar-nav__icon">
+						<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.5 4H4.5V8.5H13.5V4Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M16.5 18.25V1.75C16.5 1.33579 16.1642 1 15.75 1H2.25C1.83579 1 1.5 1.33579 1.5 1.75V18.25C1.5 18.6642 1.83579 19 2.25 19H15.75C16.1642 19 16.5 18.6642 16.5 18.25Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12.75 16.75C13.3713 16.75 13.875 16.2463 13.875 15.625C13.875 15.0037 13.3713 14.5 12.75 14.5C12.1287 14.5 11.625 15.0037 11.625 15.625C11.625 16.2463 12.1287 16.75 12.75 16.75Z" fill="#8292A8"/>
+							<path d="M9 16.75C9.62132 16.75 10.125 16.2463 10.125 15.625C10.125 15.0037 9.62132 14.5 9 14.5C8.37868 14.5 7.875 15.0037 7.875 15.625C7.875 16.2463 8.37868 16.75 9 16.75Z" fill="#8292A8"/>
+							<path d="M5.25 16.75C5.87132 16.75 6.375 16.2463 6.375 15.625C6.375 15.0037 5.87132 14.5 5.25 14.5C4.62868 14.5 4.125 15.0037 4.125 15.625C4.125 16.2463 4.62868 16.75 5.25 16.75Z" fill="#8292A8"/>
+							<path d="M12.75 13C13.3713 13 13.875 12.4963 13.875 11.875C13.875 11.2537 13.3713 10.75 12.75 10.75C12.1287 10.75 11.625 11.2537 11.625 11.875C11.625 12.4963 12.1287 13 12.75 13Z" fill="#8292A8"/>
+							<path d="M9 13C9.62132 13 10.125 12.4963 10.125 11.875C10.125 11.2537 9.62132 10.75 9 10.75C8.37868 10.75 7.875 11.2537 7.875 11.875C7.875 12.4963 8.37868 13 9 13Z" fill="#8292A8"/>
+							<path d="M5.25 13C5.87132 13 6.375 12.4963 6.375 11.875C6.375 11.2537 5.87132 10.75 5.25 10.75C4.62868 10.75 4.125 11.2537 4.125 11.875C4.125 12.4963 4.62868 13 5.25 13Z" fill="#8292A8"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Кредит
+					</div>
+				</a>
+				<a href="#" class="mobile-bar-nav__item">
+					<div class="mobile-bar-nav__icon">
+						<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.82 12.52H11.58M5.82 9.64H11.58M11.5802 2.44H15.18C15.371 2.44 15.5541 2.51586 15.6891 2.65088C15.8241 2.78591 15.9 2.96904 15.9 3.16V18.28C15.9 18.471 15.8241 18.6541 15.6891 18.7891C15.5541 18.9241 15.371 19 15.18 19H2.22C2.02904 19 1.84591 18.9241 1.71088 18.7891C1.57586 18.6541 1.5 18.471 1.5 18.28V3.16C1.5 2.96904 1.57586 2.78591 1.71088 2.65088C1.84591 2.51586 2.02904 2.44 2.22 2.44H5.8198M5.1 5.32V4.6C5.1 3.64522 5.47928 2.72955 6.15442 2.05442C6.82955 1.37928 7.74522 1 8.7 1C9.65478 1 10.5705 1.37928 11.2456 2.05442C11.9207 2.72955 12.3 3.64522 12.3 4.6V5.32H5.1Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Услуги
+					</div>
+				</a>
+				<a href="#" class="mobile-bar-nav__item">
+					<div class="mobile-bar-nav__icon">
+						<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.5 8.75H2C1.80109 8.75 1.61032 8.82902 1.46967 8.96967C1.32902 9.11032 1.25 9.30109 1.25 9.5V17.75C1.25 17.9489 1.32902 18.1397 1.46967 18.2803C1.61032 18.421 1.80109 18.5 2 18.5H6.5M6.5 8.75V18.5M6.5 8.75L10.25 1.25C10.644 1.25 11.0341 1.3276 11.3981 1.47836C11.762 1.62913 12.0927 1.8501 12.3713 2.12868C12.6499 2.40726 12.8709 2.73797 13.0216 3.10195C13.1724 3.46593 13.25 3.85603 13.25 4.25V6.5H19.0508C19.2635 6.5 19.4738 6.54523 19.6677 6.63269C19.8615 6.72016 20.0346 6.84785 20.1753 7.0073C20.3161 7.16675 20.4213 7.35431 20.4841 7.55753C20.5468 7.76076 20.5656 7.975 20.5392 8.18605L19.4142 17.1861C19.3689 17.5488 19.1926 17.8826 18.9185 18.1245C18.6444 18.3665 18.2914 18.5 17.9258 18.5H6.5" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Отзывы
+					</div>
+				</a>
+			</nav>
+		</div>
+
+		<!-- popups/modals -->
+		<div id="modals">
+			<div class="modal modal-callback" id="popup-callback">
+				<form class="modal-callback-form">
+					<h3 class="modal__title">
+						Заказ обратного звонка
+					</h3>
+					<div class="modal-callback-form__inputs">
+						<label class="main-form-label">
+							<!-- Время подставится из блока (Остались вопросы - (например на странице "Сотрудничество")) -->
+							<input class="main-form-input js-callback-time-input" type="text" hidden="hidden" value="Время не выбрано">
+						</label>
+						<label class="main-form-label">
+							<input class="main-form-input" type="text" placeholder="Имя">
+						</label>
+						<label class="main-form-label">
+							<input class="main-form-input js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+						</label>
+						<button class="btn btn_primary">
+							Отправить
+						</button>
+						<label class="main-form-checkbox">
+							<input class="main-form-checkbox__input" type="checkbox" checked="checked">
+							<span class="main-form-checkbox__checkmark"></span>
+							<span class="main-form-checkbox__text --small">Отправляя форму, вы соглашаетесь на <a href="#">обработку своих персональных данных</a></span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- vendor plugins -->
+		<script src="js/vendor/lazyload.min.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/swiper-bundle.min.js"></script>
+		<script src="js/vendor/select2.min.js"></script>
+		<script src="js/vendor/ion.rangeSlider.min.js"></script>
+		<script src="js/vendor/jquery.inputmask.min.js"></script>
+		<script src="js/vendor/jquery.fancybox.min.js"></script>
+		<script src="js/vendor/simple-notify.min.js"></script>
+
+		<!-- main scripts -->
+		<script src="js/common.js"></script>
+		<script src="js/_dev.js"></script>
+	</body>
+</html>

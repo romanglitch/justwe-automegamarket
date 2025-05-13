@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="referrer" content="origin">
+		<meta name="HandheldFriendly" content="true">
+
+		<title>auto-port.ru</title>
+
+		<!-- vendor styles -->
+		<link href="css/vendor/normalize.min.css" rel="stylesheet">
+		<link href="css/vendor/swiper-bundle.min.css" rel="stylesheet">
+		<link href="css/vendor/select2.min.css" rel="stylesheet">
+		<link href="css/vendor/ion.rangeSlider.min.css" rel="stylesheet">
+		<link href="css/vendor/jquery.fancybox.min.css" rel="stylesheet">
+		<link href="css/vendor/simple-notify.min.css" rel="stylesheet">
+
+		<!-- main styles -->
+		<link href="css/main.css" rel="stylesheet">
+		<link href="css/responsive.css" rel="stylesheet">
+		<link href="css/dev.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<div class="header-main">
+				<div class="container header-main-row">
+					<a href="/" class="header-main-logo">
+						<img class="header-main-logo__img" alt="Car Sale" src="img/logo.svg">
+					</a>
+					<nav class="header-main-nav">
+						<a href="#" class="header-main-nav__item js-h-catalog-btn">
+							<b>Каталог</b>
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Кредит
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Trade-in
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Спецпредложения
+						</a>
+						<a href="#" class="header-main-nav__item">
+							Сотрудничество
+						</a>
+					</nav>
+					<div class="header-main-actions">
+						<a href="#" class="header-compare-btn"></a>
+						<a href="#" class="header-favourite-btn">
+							<span>Избранное</span>
+							<sup>12</sup>
+						</a>
+						<div class="header-geo">
+							<button class="header-geo-btn js-h-geo-btn">
+								<span>Москва <sup style="display: none">+200 км</sup></span>
+							</button>
+							<div class="header-geo-popup js-h-geo-popup">
+								<form class="geo-form">
+									<label class="main-form-label">
+										<select class="main-form-select main-form-select_search">
+											<option selected disabled>Найти город</option>
+											<option>Москва</option>
+											<option>Example variant... Example variant...</option>
+											<option>Example variant... Example variant...Example variant... Example variant...</option>
+										</select>
+									</label>
+									<div class="geo-form__popular">
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Ростов-на-Дону
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Ростов-на-Дону
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Москва
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Санкт-Петербург
+										</a>
+										<a href="#" class="geo-form__popular__item">
+											Ростов-на-Дону
+										</a>
+									</div>
+									<label class="main-form-label" style="display: none">
+										<span class="main-form-label__heading">Радиус поиска</span>
+										<input type="text" class="js-geo-range" data-values="0,100,200,300,400,500" data-from="2" name="geo-range" value="" />
+									</label>
+									<button class="btn btn_primary">
+										Сохранить
+									</button>
+								</form>
+							</div>
+						</div>
+						<button class="header-menu-btn js-h-menu-btn">
+							<span>Меню</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="header-catalog js-h-catalog">
+				<div class="container">
+					<div class="header__grid">
+						<div class="header__col">
+							<div class="header-catalog__heading">
+								Поиск по типу кузова
+							</div>
+							<div class="header-bodies-grid">
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#sedan"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Седан
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#hatchback"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Хэтчбек
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#wagon"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Универсал
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#coupe"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Купе
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#crossover"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Кроссовер
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#off-road"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Внедорожник
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#pickup"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Пикап
+									</div>
+								</a>
+								<a href="#" class="header-bodies-item">
+									<svg class="header-bodies-item__icon">
+										<use xlink:href="img/car-types-sprite.svg#minivan"></use>
+									</svg>
+									<div class="header-bodies-item__name">
+										Минивен
+									</div>
+								</a>
+								<a href="#" class="header-bodies-more">
+									<div class="header-bodies-more__text">
+										Все типы
+										<br>кузова
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header__col">
+							<div class="header-catalog__heading">
+								Поиск по маркам автомобилей
+							</div>
+							<div class="header-marks-grid">
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+								<a href="#" class="header-marks-item">
+									<img class="header-marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили марки - Geely" src="img/lazy-loader.svg">
+									<div class="header-marks-item__name">
+										Mersedes-Benz
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header__col">
+							<div class="header-catalog__heading">
+								Поиск по популярным запросам
+							</div>
+							<div class="header-popular-links">
+								<a href="#" class="header-popular-item">
+									<svg class="header-popular-item__icon">
+										<use xlink:href="img/header-popular-sprite.svg#money"></use>
+									</svg>
+									<div class="header-popular-item__text">
+										Автомобили <b>до 1 500 000 р</b>
+									</div>
+								</a>
+								<a href="#" class="header-popular-item">
+									<svg class="header-popular-item__icon">
+										<use xlink:href="img/header-popular-sprite.svg#people"></use>
+									</svg>
+									<div class="header-popular-item__text">
+										Автомобили <b>для большой семьи</b>
+									</div>
+								</a>
+								<a href="#" class="header-popular-item">
+									<svg class="header-popular-item__icon">
+										<use xlink:href="img/header-popular-sprite.svg#compass"></use>
+									</svg>
+									<div class="header-popular-item__text">
+										Покорители бездорожья
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Каталог автомобилей
+								</a>
+								<a href="#" class="header-nav__item">
+									Автомобили с пробегом
+								</a>
+								<a href="#" class="header-nav__item">
+									Предложение дня
+								</a>
+								<a href="#" class="header-nav__item">
+									Выкуп автомобиля
+								</a>
+								<a href="#" class="header-nav__item">
+									Сравнение автомобилей
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-menu js-h-menu">
+				<div class="container">
+					<div class="header__grid header__grid_no_dividers">
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Автокредит
+								</a>
+								<a href="#" class="header-nav__item">
+									Trade-in
+								</a>
+								<a href="#" class="header-nav__item">
+									Спецпредложения
+								</a>
+								<a href="#" class="header-nav__item">
+									Предложение дня
+								</a>
+								<a href="#" class="header-nav__item">
+									Выкуп автомобиля
+								</a>
+							</nav>
+						</div>
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Отзывы об автомобилях
+								</a>
+								<a href="#" class="header-nav__item">
+									Лучшие автомобили
+								</a>
+								<a href="#" class="header-nav__item">
+									Дилеры
+								</a>
+							</nav>
+						</div>
+						<div class="header__col header__col_mob_last">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									О нас
+								</a>
+								<a href="#" class="header-nav__item">
+									Контакты
+								</a>
+								<a href="#" class="header-nav__item">
+									Сотрудничество
+								</a>
+							</nav>
+						</div>
+						<div class="header__col">
+							<nav class="header-nav">
+								<a href="#" class="header-nav__item">
+									Сравнение автомобилей
+								</a>
+								<a href="#" class="header-nav__item">
+									Авто в избранном
+								</a>
+								<a href="#" class="header-nav__item">
+									Помощь в подборе авто
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Каталог новых автомобилей -->
+			<section class="section-bg section-page">
+				<div class="container">
+					<div class="breadcrumbs">
+						<a href="/" class="breadcrumbs__item">Главная (название салона)</a>
+						<span class="breadcrumbs__item">Каталог автомобилей с пробегом</span>
+					</div>
+					<h1 class="page-title">
+						Каталог автомобилей с пробегом
+					</h1>
+					<div class="page-catalog">
+						<div class="page-catalog__body">
+							<div class="page-catalog__sidebar">
+								<div class="sidebar-filter">
+									<div id="sidebar-filter" class="filter-tabs">
+										<div class="filter-tabs__nav">
+											<button class="filter-tabs__nav-item">
+												Все
+											</button>
+											<button class="filter-tabs__nav-item">
+												Новые
+											</button>
+											<button class="filter-tabs__nav-item">
+												С пробегом
+											</button>
+										</div>
+
+										<!-- Фильтр (Все) -->
+										<div class="filter-tabs__content">
+											<form class="filter-form filter-form_in_sidebar js-filter-toggle">
+												<div class="filter-form__visible">
+													<h4 class="filter-form-heading">
+														Основные параметры
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Москва и МО</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Марка</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Модель</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">₽</span>
+																	<input class="main-form-input label-postfix__input js-currency-mask" placeholder="Цена от" type="text">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">₽</span>
+																	<input class="main-form-input label-postfix__input js-currency-mask" placeholder="Цена до" type="text">
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filter-form__hidden">
+													<h4 class="filter-form-heading">
+														Конфигурация
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Коробка</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Привод</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Кузов</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Цвет</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+													</div>
+													<h4 class="filter-form-heading">
+														Двигатель
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Тип двигателя</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Объем, л.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="0.8" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="13" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Мощность, л. с.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="67" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="693" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Разгон, с.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="4" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="35" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Расход топлива на 100км.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="4" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="35" type="number">
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filter-form__footer filter-form__footer_one_column">
+													<button class="filter-form-toggle js-filter-toggle-btn --text-underline" data-default-text="Расширенный фильтр" data-active-text="Свернуть фильтр">
+														Расширенный фильтр
+													</button>
+													<a href="#" class="btn btn_primary filter-form-submit">
+														12 459 автомобилей
+													</a>
+												</div>
+											</form>
+										</div>
+
+										<!-- Фильтр (Все) -->
+										<div class="filter-tabs__content">
+											<form class="filter-form filter-form_in_sidebar js-filter-toggle">
+												<div class="filter-form__visible">
+													<h4 class="filter-form-heading">
+														Основные параметры
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Москва и МО</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Марка</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Модель</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">₽</span>
+																	<input class="main-form-input label-postfix__input js-currency-mask" placeholder="Цена от" type="text">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">₽</span>
+																	<input class="main-form-input label-postfix__input js-currency-mask" placeholder="Цена до" type="text">
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filter-form__hidden">
+													<h4 class="filter-form-heading">
+														Конфигурация
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Коробка</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Привод</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Кузов</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Цвет</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+													</div>
+													<h4 class="filter-form-heading">
+														Двигатель
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Тип двигателя</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Объем, л.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="0.8" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="13" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Мощность, л. с.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="67" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="693" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Разгон, с.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="4" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="35" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Расход топлива на 100км.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="4" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="35" type="number">
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filter-form__footer filter-form__footer_one_column">
+													<button class="filter-form-toggle js-filter-toggle-btn --text-underline" data-default-text="Расширенный фильтр" data-active-text="Свернуть фильтр">
+														Расширенный фильтр
+													</button>
+													<a href="#" class="btn btn_primary filter-form-submit">
+														12 459 автомобилей
+													</a>
+												</div>
+											</form>
+										</div>
+
+										<!-- Фильтр (С пробегом) -->
+										<div class="filter-tabs__content">
+											<form class="filter-form filter-form_in_sidebar js-filter-toggle">
+												<div class="filter-form__visible">
+													<h4 class="filter-form-heading">
+														Основные параметры
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Москва и МО</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Марка</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Модель</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">₽</span>
+																	<input class="main-form-input label-postfix__input js-currency-mask" placeholder="Цена от" type="text">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">₽</span>
+																	<input class="main-form-input label-postfix__input js-currency-mask" placeholder="Цена до" type="text">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">км</span>
+																	<input
+																			class="main-form-input label-postfix__input js-mileage-mask"
+																			data-inputmask="'max': '1000000'"
+																			placeholder="Пробег от"
+																			type="text"
+																	>
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label label-postfix">
+																	<span class="label-postfix__text">км</span>
+																	<input
+																			class="main-form-input label-postfix__input js-mileage-mask"
+																			data-inputmask="'max': '1000000'"
+																			placeholder="Пробег до"
+																			type="text"
+																	>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filter-form__hidden">
+													<h4 class="filter-form-heading">
+														Конфигурация
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Коробка</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Привод</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Кузов</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Цвет</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+													</div>
+													<h4 class="filter-form-heading">
+														Двигатель
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Тип двигателя</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Объем, л.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="0.8" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="13" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Мощность, л. с.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="67" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="693" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Разгон, с.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="4" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="35" type="number">
+																</label>
+															</div>
+														</div>
+														<div class="filter-form__col">
+															<p class="filter-form-sub-heading">
+																Расход топлива на 100км.
+															</p>
+															<div class="filter-form__inputs-row">
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="4" type="number">
+																</label>
+																<div class="filter-form__inputs-row__divider"></div>
+																<label class="main-form-label">
+																	<input class="main-form-input" placeholder="35" type="number">
+																</label>
+															</div>
+														</div>
+													</div>
+													<h4 class="filter-form-heading">
+														Об автомобиле
+													</h4>
+													<div class="filter-form__row filter-form__row_one_column">
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Состояние</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<label class="main-form-label">
+																<select class="main-form-select">
+																	<option selected disabled>Кол-во владельцев</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...</option>
+																	<option>Example variant... Example variant...Example variant... Example variant...</option>
+																</select>
+															</label>
+														</div>
+														<div class="filter-form__col">
+															<div class="filter-form__checks-row">
+																<label class="main-form-checkbox">
+																	<input class="main-form-checkbox__input" type="checkbox">
+																	<span class="main-form-checkbox__checkmark"></span>
+																	<span class="main-form-checkbox__text">с фото</span>
+																</label>
+																<label class="main-form-checkbox">
+																	<input class="main-form-checkbox__input" type="checkbox">
+																	<span class="main-form-checkbox__checkmark"></span>
+																	<span class="main-form-checkbox__text">Без пробега по РФ</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="filter-form__footer filter-form__footer_one_column">
+													<button class="filter-form-toggle js-filter-toggle-btn --text-underline" data-default-text="Расширенный фильтр" data-active-text="Свернуть фильтр">
+														Расширенный фильтр
+													</button>
+													<a href="#" class="btn btn_primary filter-form-submit">
+														12 459 автомобилей
+													</a>
+												</div>
+											</form>
+										</div>
+									</div>
+									<button class="btn btn_primary mob-hero-filter-btn mob-hero-filter-btn_icon_filter js-modals" data-src="#sidebar-filter">
+										<span>Параметры поиска</span>
+									</button>
+								</div>
+							</div>
+							<div class="page-catalog__content">
+								<div class="page-catalog__top">
+									<div class="catalog-sorting">
+										<a href="#" class="catalog-sorting__item --price">
+											Сортировка: по пробегу
+										</a>
+									</div>
+								</div>
+								<div class="page-catalog__grid">
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+									<div class="catalog-item">
+										<a href="#" class="catalog-item__photo">
+											<img class="catalog-item__photo__img lazy" data-src="img/ref__car-photo.png" alt="Geely - Atlas Pro Flagship+" src="img/lazy-loader.svg">
+											<div class="catalog-item__photo__vin">
+												VIN проверен
+											</div>
+										</a>
+										<div class="catalog-item__content">
+											<a href="#" class="catalog-item__title">
+												Atlas Pro Flagship+
+											</a>
+											<div class="catalog-item__options">
+												<div class="catalog-item__options__item">
+													<span>Год:</span> 2022
+												</div>
+												<div class="catalog-item__options__item">
+													<span>Пробег:</span> 16 000 км.
+												</div>
+											</div>
+											<div class="catalog-item__specs">
+												<span>Внедорожник</span>
+												<span>2022</span>
+												<span>Бензин, 1.5</span>
+												<span>Робот</span>
+												<span>Полный</span>
+												<span>Черный металлик</span>
+											</div>
+											<a href="#" class="arrow-link">
+												Все опции
+											</a>
+										</div>
+										<div class="catalog-item__price">
+											<div class="catalog-item__price__main">
+												1 898 990 ₽
+											</div>
+											<div class="catalog-item__price__credit">
+												от 18 124 ₽/мес.
+											</div>
+										</div>
+										<div class="catalog-item__actions">
+											<a href="#" class="btn btn_favourite catalog-item__btn" title="Добавить в избранное"></a>
+											<a href="#" class="btn btn_primary catalog-item__btn">
+												Оставить заявку
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page-catalog__footer">
+							<div class="pagination">
+								<a href="#" class="pagination__prev"></a>
+								<a href="#" class="pagination__item">1</a>
+								<a href="#" class="pagination__item">2</a>
+								<a href="#" class="pagination__item">3</a>
+								<a href="#" class="pagination__item --current">4</a>
+								<a href="#" class="pagination__item">5</a>
+								<a href="#" class="pagination__item">...</a>
+								<a href="#" class="pagination__item">10</a>
+								<a href="#" class="pagination__item">11</a>
+								<a href="#" class="pagination__next"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Услуги -->
+			<section class="section-services">
+				<div class="container">
+					<div class="services-grid">
+						<div class="services-item s-index-1 services-item_2x">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-credit.png" alt="Кредит" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Кредит
+							</h4>
+							<div class="services-item__content">
+								<ul class="main-list main-list_grid_2">
+									<li class="main-list__item">
+										Не выходя из дома
+									</li>
+									<li class="main-list__item">
+										Без страхования жизни
+									</li>
+									<li class="main-list__item">
+										Онлайн-заявка
+									</li>
+									<li class="main-list__item">
+										На срок до 7 лет
+									</li>
+								</ul>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-2">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-buyout.png" alt="Выкуп автомобилей" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Выкуп автомобилей
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Продайте свой авто
+									<br>без лишних трудностей
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-3">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-car-reviews.png" alt="Отзывы об автомобилях" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Отзывы об автомобилях
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Честные отзывы
+									<br>автолюбителей
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-4 services-item_2x">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-tradein.png" alt="Trade-in" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Trade-in
+							</h4>
+							<div class="services-item__content">
+								<ul class="main-list main-list_grid_2">
+									<li class="main-list__item">
+										Бесплатная диагностика
+									</li>
+									<li class="main-list__item">
+										Оформление за 1 час
+									</li>
+									<li class="main-list__item">
+										Безопасная сделка
+									</li>
+									<li class="main-list__item">
+										До 150 000 ₽
+									</li>
+								</ul>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-5">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-spec-sale.png" alt="Спецпредложения" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Спецпредложения
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Самые выгодные
+									<br>предложения
+									<br>от дилеров
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+						<div class="services-item s-index-6">
+							<img class="services-item__image lazy" data-src="img/services/ref__item-best-cars.png" alt="Лучшие автомобили" src="img/lazy-loader.svg">
+							<h4 class="services-item__title">
+								Лучшие автомобили
+							</h4>
+							<div class="services-item__content">
+								<p class="services-item__text">
+									Автомобили с самым
+									<br>высоким рейтингом
+									<br>среди пользователей
+								</p>
+							</div>
+							<div class="services-item__button">
+								<a href="#" class="btn btn_secondary services-item__btn">
+									Подробнее
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Марки автомобилей -->
+			<section class="section-marks">
+				<div class="container">
+					<div class="section-heading">
+						<h2 class="section-heading__title">
+							Марки автомобилей
+						</h2>
+					</div>
+					<div class="marks-row">
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+						<a href="#" class="marks-sm-item">
+							<img class="marks-sm-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+						</a>
+					</div>
+					<div class="marks-grid">
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+						<a href="#" class="marks-item">
+							<img class="marks-item__icon lazy" data-src="img/ref__mark-icon.png" alt="Автомобили - Geely" src="img/lazy-loader.svg">
+							<div class="marks-item__name">
+								Mersedes-Benz
+							</div>
+							<div class="marks-item__count">
+								124
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="footer">
+				<div class="container">
+					<div class="footer__grid">
+						<div class="footer__col">
+							<a href="/" class="footer-logo">
+								<img class="footer-logo__img" alt="Car Sale" src="img/logo.svg">
+							</a>
+						</div>
+						<div class="footer__col">
+							<nav class="footer-nav">
+								<a href="#" class="footer-nav__item">
+									Автокредит
+								</a>
+								<a href="#" class="footer-nav__item">
+									Trade-in
+								</a>
+								<a href="#" class="footer-nav__item">
+									Акции и подарки
+								</a>
+								<a href="#" class="footer-nav__item">
+									Спецпредложения
+								</a>
+								<a href="#" class="footer-nav__item">
+									Выкуп авто
+								</a>
+							</nav>
+						</div>
+						<div class="footer__col">
+							<nav class="footer-nav">
+								<a href="#" class="footer-nav__item">
+									Контакты
+								</a>
+								<a href="#" class="footer-nav__item">
+									О нас
+								</a>
+								<a href="#" class="footer-nav__item">
+									Сравнение автомобилей
+								</a>
+								<a href="#" class="footer-nav__item">
+									Отзывы об автомобилях
+								</a>
+								<a href="#" class="footer-nav__item">
+									Дилерам
+								</a>
+							</nav>
+						</div>
+						<div class="footer__col">
+							<form class="footer-form">
+								<div class="footer-form__title">
+									Нужна помощь в выборе автомобиля?
+								</div>
+								<div class="footer-form__description">
+									Закажите бесплатную консультацию наших специалистов. Перезвоним в течение 10 минут.
+								</div>
+								<div class="footer-form__inputs">
+									<label class="main-form-label">
+										<input class="main-form-input js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+									</label>
+									<button class="btn btn_primary">
+										Оставить заявку
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer__grid footer__grid_2">
+						<div class="footer__col">
+							<h4 class="footer-heading">
+								По регионам
+							</h4>
+							<nav class="footer-nav footer-nav_grid">
+								<a href="#" class="footer-nav__item">
+									Москва
+								</a>
+								<a href="#" class="footer-nav__item">
+									Москва
+								</a>
+								<a href="#" class="footer-nav__item">
+									Санкт-Петербург
+								</a>
+								<a href="#" class="footer-nav__item">
+									Санкт-Петербург
+								</a>
+								<a href="#" class="footer-nav__item">
+									Воронеж
+								</a>
+								<a href="#" class="footer-nav__item">
+									Воронеж
+								</a>
+								<a href="#" class="footer-nav__item">
+									Волгоград
+								</a>
+								<a href="#" class="footer-nav__item">
+									Волгоград
+								</a>
+								<a href="#" class="footer-nav__item">
+									Казань
+								</a>
+								<a href="#" class="footer-nav__item">
+									Казань
+								</a>
+								<a href="#" class="footer-nav__item">
+									Краснодар
+								</a>
+								<a href="#" class="footer-nav__item">
+									Краснодар
+								</a>
+							</nav>
+						</div>
+						<div class="footer__col">
+							<h4 class="footer-heading">
+								По популярным запросам
+							</h4>
+							<nav class="footer-nav footer-nav_grid">
+								<a href="#" class="footer-nav__item">
+									Автомобили до 1 500 000 ₽
+								</a>
+								<a href="#" class="footer-nav__item">
+									Автомобили до 1 500 000 ₽
+								</a>
+								<a href="#" class="footer-nav__item">
+									Внедорожники
+								</a>
+								<a href="#" class="footer-nav__item">
+									Внедорожники
+								</a>
+								<a href="#" class="footer-nav__item">
+									Седаны
+								</a>
+								<a href="#" class="footer-nav__item">
+									Седаны
+								</a>
+								<a href="#" class="footer-nav__item">
+									Корейские автомобили
+								</a>
+								<a href="#" class="footer-nav__item">
+									Корейские автомобили
+								</a>
+								<a href="#" class="footer-nav__item">
+									Самые популярные автомобили
+								</a>
+								<a href="#" class="footer-nav__item">
+									Самые популярные автомобили
+								</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Notify for tablets -->
+		<div class="mobile-device-helper">
+			<div class="mobile-device-helper-inner">
+				Пожалуйста, переверните устройство. <br>Это необходимо для корректного отображения сайта.
+			</div>
+		</div>
+
+		<!-- bottom bar -->
+		<div class="mobile-bar">
+			<nav class="mobile-bar-nav">
+				<a href="#" class="mobile-bar-nav__item --active">
+					<div class="mobile-bar-nav__icon">
+						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11.7495 17.4993V12.9992C11.7495 12.8003 11.6704 12.6096 11.5298 12.4689C11.3891 12.3283 11.1984 12.2492 10.9995 12.2492H7.99945C7.80054 12.2492 7.60977 12.3283 7.46912 12.4689C7.32847 12.6096 7.24945 12.8003 7.24945 12.9992V17.4993C7.24945 17.6982 7.17045 17.889 7.02981 18.0296C6.88918 18.1703 6.69844 18.2493 6.49954 18.2493L2.00009 18.2499C1.90159 18.2499 1.80406 18.2305 1.71305 18.1929C1.62205 18.1552 1.53936 18.0999 1.4697 18.0303C1.40005 17.9606 1.3448 17.878 1.3071 17.787C1.2694 17.696 1.25 17.5984 1.25 17.4999V8.83176C1.25 8.72727 1.27183 8.62394 1.3141 8.52838C1.35637 8.43282 1.41814 8.34715 1.49545 8.27685L8.99493 1.45797C9.13299 1.33244 9.31287 1.26288 9.49946 1.26288C9.68605 1.26287 9.86594 1.33242 10.004 1.45793L17.5045 8.27685C17.5818 8.34714 17.6436 8.43282 17.6859 8.52838C17.7282 8.62395 17.75 8.7273 17.75 8.83179V17.4999C17.75 17.5984 17.7306 17.696 17.6929 17.787C17.6552 17.878 17.6 17.9606 17.5303 18.0303C17.4606 18.0999 17.378 18.1552 17.2869 18.1929C17.1959 18.2306 17.0984 18.2499 16.9999 18.2499L12.4994 18.2493C12.3005 18.2493 12.1097 18.1703 11.9691 18.0296C11.8285 17.889 11.7494 17.6982 11.7495 17.4993V17.4993Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Главная
+					</div>
+				</a>
+				<a href="javascript:;" class="mobile-bar-nav__item js-h-catalog-btn">
+					<div class="mobile-bar-nav__icon">
+						<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M21 14.25V16.5C21 16.6989 20.921 16.8897 20.7803 17.0303C20.6397 17.171 20.4489 17.25 20.25 17.25H18C17.8011 17.25 17.6103 17.171 17.4697 17.0303C17.329 16.8897 17.25 16.6989 17.25 16.5V14.25M21 14.25H3M21 14.25V8.25L18.198 1.9454C18.139 1.81282 18.0429 1.70018 17.9213 1.62113C17.7996 1.54208 17.6577 1.5 17.5126 1.5H6.48741C6.34233 1.5 6.20037 1.54208 6.07872 1.62113C5.95708 1.70018 5.86097 1.81282 5.80205 1.9454L3 8.25V14.25M6.75 14.25V16.5C6.75 16.6989 6.67098 16.8897 6.53033 17.0303C6.38968 17.171 6.19891 17.25 6 17.25H3.75C3.55109 17.25 3.36032 17.171 3.21967 17.0303C3.07902 16.8897 3 16.6989 3 16.5V14.25M16.5 11.25H18M6 11.25H7.5M1.5 8.25H22.5" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Каталог
+					</div>
+				</a>
+				<a href="#" class="mobile-bar-nav__item">
+					<div class="mobile-bar-nav__icon">
+						<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M13.5 4H4.5V8.5H13.5V4Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M16.5 18.25V1.75C16.5 1.33579 16.1642 1 15.75 1H2.25C1.83579 1 1.5 1.33579 1.5 1.75V18.25C1.5 18.6642 1.83579 19 2.25 19H15.75C16.1642 19 16.5 18.6642 16.5 18.25Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12.75 16.75C13.3713 16.75 13.875 16.2463 13.875 15.625C13.875 15.0037 13.3713 14.5 12.75 14.5C12.1287 14.5 11.625 15.0037 11.625 15.625C11.625 16.2463 12.1287 16.75 12.75 16.75Z" fill="#8292A8"/>
+							<path d="M9 16.75C9.62132 16.75 10.125 16.2463 10.125 15.625C10.125 15.0037 9.62132 14.5 9 14.5C8.37868 14.5 7.875 15.0037 7.875 15.625C7.875 16.2463 8.37868 16.75 9 16.75Z" fill="#8292A8"/>
+							<path d="M5.25 16.75C5.87132 16.75 6.375 16.2463 6.375 15.625C6.375 15.0037 5.87132 14.5 5.25 14.5C4.62868 14.5 4.125 15.0037 4.125 15.625C4.125 16.2463 4.62868 16.75 5.25 16.75Z" fill="#8292A8"/>
+							<path d="M12.75 13C13.3713 13 13.875 12.4963 13.875 11.875C13.875 11.2537 13.3713 10.75 12.75 10.75C12.1287 10.75 11.625 11.2537 11.625 11.875C11.625 12.4963 12.1287 13 12.75 13Z" fill="#8292A8"/>
+							<path d="M9 13C9.62132 13 10.125 12.4963 10.125 11.875C10.125 11.2537 9.62132 10.75 9 10.75C8.37868 10.75 7.875 11.2537 7.875 11.875C7.875 12.4963 8.37868 13 9 13Z" fill="#8292A8"/>
+							<path d="M5.25 13C5.87132 13 6.375 12.4963 6.375 11.875C6.375 11.2537 5.87132 10.75 5.25 10.75C4.62868 10.75 4.125 11.2537 4.125 11.875C4.125 12.4963 4.62868 13 5.25 13Z" fill="#8292A8"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Кредит
+					</div>
+				</a>
+				<a href="#" class="mobile-bar-nav__item">
+					<div class="mobile-bar-nav__icon">
+						<svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.82 12.52H11.58M5.82 9.64H11.58M11.5802 2.44H15.18C15.371 2.44 15.5541 2.51586 15.6891 2.65088C15.8241 2.78591 15.9 2.96904 15.9 3.16V18.28C15.9 18.471 15.8241 18.6541 15.6891 18.7891C15.5541 18.9241 15.371 19 15.18 19H2.22C2.02904 19 1.84591 18.9241 1.71088 18.7891C1.57586 18.6541 1.5 18.471 1.5 18.28V3.16C1.5 2.96904 1.57586 2.78591 1.71088 2.65088C1.84591 2.51586 2.02904 2.44 2.22 2.44H5.8198M5.1 5.32V4.6C5.1 3.64522 5.47928 2.72955 6.15442 2.05442C6.82955 1.37928 7.74522 1 8.7 1C9.65478 1 10.5705 1.37928 11.2456 2.05442C11.9207 2.72955 12.3 3.64522 12.3 4.6V5.32H5.1Z" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Услуги
+					</div>
+				</a>
+				<a href="#" class="mobile-bar-nav__item">
+					<div class="mobile-bar-nav__icon">
+						<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.5 8.75H2C1.80109 8.75 1.61032 8.82902 1.46967 8.96967C1.32902 9.11032 1.25 9.30109 1.25 9.5V17.75C1.25 17.9489 1.32902 18.1397 1.46967 18.2803C1.61032 18.421 1.80109 18.5 2 18.5H6.5M6.5 8.75V18.5M6.5 8.75L10.25 1.25C10.644 1.25 11.0341 1.3276 11.3981 1.47836C11.762 1.62913 12.0927 1.8501 12.3713 2.12868C12.6499 2.40726 12.8709 2.73797 13.0216 3.10195C13.1724 3.46593 13.25 3.85603 13.25 4.25V6.5H19.0508C19.2635 6.5 19.4738 6.54523 19.6677 6.63269C19.8615 6.72016 20.0346 6.84785 20.1753 7.0073C20.3161 7.16675 20.4213 7.35431 20.4841 7.55753C20.5468 7.76076 20.5656 7.975 20.5392 8.18605L19.4142 17.1861C19.3689 17.5488 19.1926 17.8826 18.9185 18.1245C18.6444 18.3665 18.2914 18.5 17.9258 18.5H6.5" stroke="#8292A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="mobile-bar-nav__text">
+						Отзывы
+					</div>
+				</a>
+			</nav>
+		</div>
+
+		<!-- popups/modals -->
+		<div id="modals">
+			<div class="modal modal-callback" id="popup-callback">
+				<form class="modal-callback-form">
+					<h3 class="modal__title">
+						Заказ обратного звонка
+					</h3>
+					<div class="modal-callback-form__inputs">
+						<label class="main-form-label">
+							<!-- Время подставится из блока (Остались вопросы - (например на странице "Сотрудничество")) -->
+							<input class="main-form-input js-callback-time-input" type="text" hidden="hidden" value="Время не выбрано">
+						</label>
+						<label class="main-form-label">
+							<input class="main-form-input" type="text" placeholder="Имя">
+						</label>
+						<label class="main-form-label">
+							<input class="main-form-input js-phone-mask" type="text" placeholder="+7 (___) ___-__-__" pattern="\d*" autocomplete="on">
+						</label>
+						<button class="btn btn_primary">
+							Отправить
+						</button>
+						<label class="main-form-checkbox">
+							<input class="main-form-checkbox__input" type="checkbox" checked="checked">
+							<span class="main-form-checkbox__checkmark"></span>
+							<span class="main-form-checkbox__text --small">Отправляя форму, вы соглашаетесь на <a href="#">обработку своих персональных данных</a></span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- vendor plugins -->
+		<script src="js/vendor/lazyload.min.js"></script>
+		<script src="js/vendor/jquery.min.js"></script>
+		<script src="js/vendor/swiper-bundle.min.js"></script>
+		<script src="js/vendor/select2.min.js"></script>
+		<script src="js/vendor/ion.rangeSlider.min.js"></script>
+		<script src="js/vendor/jquery.inputmask.min.js"></script>
+		<script src="js/vendor/jquery.fancybox.min.js"></script>
+		<script src="js/vendor/simple-notify.min.js"></script>
+
+		<!-- main scripts -->
+		<script src="js/common.js"></script>
+		<script src="js/_dev.js"></script>
+	</body>
+</html>
